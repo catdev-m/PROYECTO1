@@ -34,7 +34,7 @@
                             <x-dropdown-link :href="route('logout')"
                                     onclick="event.preventDefault();
                                                 this.closest('form').submit();">
-                                {{ __('Log Out') }}
+                                <span class="lnr lnr-exit pr-2"></span>{{ __('Log Out') }}
                             </x-dropdown-link>
                         </form>
                     </x-slot>
@@ -55,9 +55,21 @@
 
     <!-- Responsive Navigation Menu -->
     <div :class="{'block': open, 'hidden': ! open}" class="hidden lg:hidden">
-        <div class="pt-2 pb-3 space-y-1">
+        <div class="pb-1.5 space-y-1">
             <x-responsive-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
-                {{ __('Dashboard') }}
+                <span class="lnr lnr-layers pr-2"></span> Tablero
+            </x-responsive-nav-link>
+        </div>
+        <div :class="{'block': open, 'hidden': ! open}" class="hidden lg:hidden">
+        <div class=" pb-1.5">
+            <x-responsive-nav-link :href="route('proyectos')" :active="request()->routeIs('proyectos')">
+            <span class="lnr lnr-pencil pr-2"></span>Proyectos
+            </x-responsive-nav-link>
+        </div>
+        <div :class="{'block': open, 'hidden': ! open}" class="hidden lg:hidden">
+        <div class=" pb-1.5">
+            <x-responsive-nav-link :href="route('tareas')" :active="request()->routeIs('tareas')">
+            <span class="lnr lnr-bookmark pr-2"></span> Tareas
             </x-responsive-nav-link>
         </div>
 

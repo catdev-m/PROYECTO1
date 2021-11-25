@@ -1,8 +1,10 @@
 @extends('layouts/app')
 
+@section('title', 'Tablero')
+
 @section('contenido')
 <div class="lg:w-10/12 w-full h-auto">
-    <div class="w-full  lg:h-28 h-16 lg:py-4 py-2 px-6 lg:text-left text-center text-white bg-blue-500">
+    <div class="w-full  lg:h-32 h-16 lg:py-4 py-2 px-6 lg:text-left text-center text-white bg-blue-500">
         <p class="lg:text-4xl text-2xl">Perfil.</p>
         <p class="text-sm"> Resumen</p>
     </div>
@@ -10,5 +12,4 @@
 
     </div>
 </div>
-    
 @endsection
